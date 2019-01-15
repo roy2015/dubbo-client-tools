@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo 
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.roy" />
+
+    <dubbo:application name="promotion-test-provider" owner="mph" organization="rograndec" />
+
+    <!--<dubbo:registry address="zookeeper://192.168.19.124:2181" />-->
+    <!-- 关闭所有服务的启动时检查 (没有提供者时报错)。-->
+	<dubbo:consumer check="false" />
+
+    <!-- 促销服务 -->
+    <import resource="classpath:promotion-dubbo-reference-local.xml"/>
+    <!--<dubbo:reference id="mphPromotionCornerService" interface="com.mph.coreapi.promotion.service.MphPromotionCornerService" timeout="30000" version="1.0" url="dubbo://127.0.0.1:18164"/>-->
+    
+</beans>
