@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * @Author: jun.guo
  * @Email: jun.guo@rograndec.com
- * @CreateDate: 2019/1/7 0007
+ * @CreateDate: 2019/1/7
  * @Version: 1.0
  */
 @RunWith(SpringJUnit4ClassRunner.class)
