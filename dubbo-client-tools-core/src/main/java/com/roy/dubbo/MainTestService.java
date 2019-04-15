@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MainTestService {
 
-    @Autowired
+    @Autowired(required = false)
     MphPromotionCornerService mphPromotionCornerService;
 
     private final static String ACT_URL = "https://act.test.wdyy.com.cn";
