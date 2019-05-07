@@ -10,11 +10,12 @@
 
     <dubbo:application name="roy-demo-consume" owner="roy" organization="rograndec" />
 
-    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
+    <!--<dubbo:registry address="zookeeper://127.0.0.1:2181" />-->
+
     <!-- 关闭所有服务的启动时检查 (没有提供者时报错)。-->
 	<dubbo:consumer check="false" />
 
     <dubbo:reference id="demoService" interface="com.roy.dubbo.provider.service.demo.DemoService"
-                     timeout="30000" version="2.0.0"/>
+                     timeout="30000" version="2.0.0" url="localhost:20880"/>
     
 </beans>
