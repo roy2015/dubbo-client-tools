@@ -29,9 +29,10 @@ public class TestDubboDemoService extends AbstractJUnit4SpringContextTests {
     private DemoService demoService;
 
     @Test
-    public void testAdd() {
+    public void testAdd() throws IOException {
         Integer add = demoService.add(1, 2);
         System.out.println(add);
+        System.in.read();
     }
 
     @Test

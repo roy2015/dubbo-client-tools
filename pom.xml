@@ -55,6 +55,7 @@
         <version-spring>4.3.10.RELEASE</version-spring>
         <!-- Dubbo版本由2.4.5升级到2.5.7-->
         <version-dubbo>2.5.7</version-dubbo>
+        <version-netty4>4.0.28.Final</version-netty4>
         <!-- Apache Commons -->
         <commons.langs.version>3.4</commons.langs.version>
         <commons.io.version>1.3.2</commons.io.version>
@@ -119,6 +120,12 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+            <!-- netty4 -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${version-netty4}</version>
             </dependency>
 
             <!-- cglib -->
