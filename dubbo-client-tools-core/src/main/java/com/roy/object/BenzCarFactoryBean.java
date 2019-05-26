@@ -2,6 +2,7 @@ package com.roy.object;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
@@ -10,22 +11,20 @@ import org.springframework.stereotype.Component;
  * Created by apple on 2019/5/25.
  */
 @Component
-public class CarFactoryBean implements FactoryBean<Car>, BeanFactoryPostProcessor {
+public class BenzCarFactoryBean implements FactoryBean<Car>, InitializingBean {
     private int factoryId;
     private int factoryName;
 
+    private BenzCar benzCar;
+
     @Override
     public Car getObject() throws Exception {
-        AudiCar audiCar = new AudiCar();
-        audiCar.setName("audi");
-        audiCar.setSpeed(220);
-        audiCar.setPrice(200000);
-        return audiCar;
+        return benzCar;
     }
 
     @Override
     public Class<?> getObjectType() {
-        return Car.class;
+        return BenzCar.class;
     }
 
     @Override
@@ -50,7 +49,10 @@ public class CarFactoryBean implements FactoryBean<Car>, BeanFactoryPostProcesso
     }
 
     @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-
+    public void afterPropertiesSet() throws Exception {
+        benzCar = new BenzCar();
+        benzCar.setName("kalr benz");
+        benzCar.setPrice(900000);
+        benzCar.setSpeed(300);
     }
 }
