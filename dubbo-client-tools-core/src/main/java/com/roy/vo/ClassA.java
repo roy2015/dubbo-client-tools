@@ -1,9 +1,10 @@
 package com.roy.vo;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import java.util.Date;
 
 /**
  * @Author: jun.guo
@@ -13,10 +14,16 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
+/**
+ * 测试主类
+ */
 public class ClassA {
 
     @Value("${redis.addr}")
     private String redisUrl;
+
+    @Value("${birthDate}")
+    private Date birthDate;
 
     @Autowired
     ClassB classB;
@@ -27,5 +34,9 @@ public class ClassA {
 
     public String getRedisUrl() {
         return redisUrl;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
     }
 }

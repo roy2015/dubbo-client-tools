@@ -30,6 +30,7 @@ public class TestSpringDemo  extends AbstractJUnit4SpringContextTests {
     @Test
     public void testSpringLoadProcess() {
         System.out.println( classA.getRedisUrl() );
+        System.out.println(classA.getBirthDate());
     }
 
     @Test
