@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns="http://code.alibabatech.com/schema/dubbo"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:tool="http://www.springframework.org/schema/tool"
 	targetNamespace="http://code.alibabatech.com/schema/dubbo">
-	
+
 	<xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
 	<xsd:import namespace="http://www.springframework.org/schema/beans"/>
 	<xsd:import namespace="http://www.springframework.org/schema/tool"/>
@@ -12,7 +12,7 @@
 	<xsd:annotation>
 		<xsd:documentation><![CDATA[ Namespace support for the dubbo services provided by dubbo framework. ]]></xsd:documentation>
 	</xsd:annotation>
-	
+
 	<xsd:complexType name="abstractMethodType">
 		<xsd:attribute name="timeout" type="xsd:string" use="optional" default="0">
 			<xsd:annotation>
@@ -70,7 +70,7 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="abstractInterfaceType">
 		<xsd:complexContent>
 			<xsd:extension base="abstractMethodType">
@@ -162,7 +162,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="abstractReferenceType">
 		<xsd:complexContent>
 			<xsd:extension base="abstractInterfaceType">
@@ -214,7 +214,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="abstractServiceType">
 		<xsd:complexContent>
 			<xsd:extension base="abstractInterfaceType">
@@ -295,7 +295,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="applicationType">
 		<xsd:attribute name="id" type="xsd:ID">
 			<xsd:annotation>
@@ -358,7 +358,7 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="moduleType">
 		<xsd:attribute name="id" type="xsd:ID">
 			<xsd:annotation>
@@ -401,7 +401,7 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="registryType">
 		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
 			<xsd:element ref="parameter" minOccurs="0" maxOccurs="unbounded" />
@@ -517,7 +517,7 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="monitorType">
 		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
 			<xsd:element ref="parameter" minOccurs="0" maxOccurs="unbounded" />
@@ -558,7 +558,7 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="parameterType">
 		<xsd:attribute name="key" type="xsd:string" use="required">
 			<xsd:annotation>
@@ -576,7 +576,7 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="methodType">
 		<xsd:complexContent>
 			<xsd:extension base="abstractMethodType">
@@ -637,7 +637,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="argumentType">
 		<xsd:attribute name="index" type="xsd:string" use="optional" >
 			<xsd:annotation>
@@ -655,7 +655,7 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="consumerType">
 		<xsd:complexContent>
 			<xsd:extension base="abstractReferenceType">
@@ -671,7 +671,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="referenceType">
 		<xsd:complexContent>
 			<xsd:extension base="abstractReferenceType">
@@ -713,7 +713,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="protocolType">
 		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
 			<xsd:element ref="parameter" minOccurs="0" maxOccurs="unbounded" />
@@ -870,7 +870,7 @@
 		</xsd:attribute>
 		<xsd:anyAttribute namespace="##other" processContents="lax" />
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="providerType">
 		<xsd:complexContent>
 			<xsd:extension base="abstractServiceType">
@@ -1055,7 +1055,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="annotationType">
 		<xsd:attribute name="id" type="xsd:ID">
 			<xsd:annotation>
@@ -1068,83 +1068,83 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
-	
+
 	<xsd:element name="annotation" type="annotationType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ The annotation config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ The annotation config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="application" type="applicationType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ The application config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ The application config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="module" type="moduleType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ The module config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ The module config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="registry" type="registryType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ The registry config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ The registry config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="monitor" type="monitorType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ The logstat monitor config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ The logstat monitor config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="provider" type="providerType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ Export service default config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ Export service default config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="consumer" type="consumerType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ Service reference default config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ Service reference default config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="protocol" type="protocolType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ Service provider config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ Service provider config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="service" type="serviceType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ Export service config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ Export service config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="reference" type="referenceType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ Reference service config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ Reference service config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="method" type="methodType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ The service method config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ The service method config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="argument" type="argumentType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ The service argument config ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ The service argument config ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 	<xsd:element name="parameter" type="parameterType">
-		<xsd:annotation> 
-			<xsd:documentation><![CDATA[ The service url parameter ]]></xsd:documentation> 
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ The service url parameter ]]></xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	
+
 </xsd:schema>
