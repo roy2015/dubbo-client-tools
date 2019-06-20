@@ -3,6 +3,7 @@ package com.roy;
 import com.otherPkg.DynamicBeanA;
 import com.otherPkg.DynamicBeanB;
 import com.roy.vo.ClassA;
+import com.roy.vo.ClassC;
 import com.roy.vo.circular.CiculatA;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,10 +28,15 @@ public class TestSpringDemo  extends AbstractJUnit4SpringContextTests {
     @Autowired
     ClassA classA;
 
+    @Autowired
+    ClassC classC;
+
     @Test
     public void testSpringLoadProcess() {
         System.out.println( classA.getRedisUrl() );
         System.out.println(classA.getBirthDate());
+        logger.debug(classA.getUser());
+        logger.debug(classC.getUser());
     }
 
     @Test

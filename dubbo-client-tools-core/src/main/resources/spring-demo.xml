@@ -23,6 +23,26 @@
         </property>
     </bean>
 
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.roy.propertyeditor.UserAToUserConverter">
+                    <property name="dateFormatStr" value="yyyy-MM-dd hh:mm:ss"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="userA" class="com.roy.vo.targetVO.UserA">
+        <property name="ageA" value="12"/>
+        <property name="birthDateA" value="1989-06-04 06:03:04"/>
+        <property name="nameA" value="jun,guo"/>
+    </bean>
+
+    <bean class="com.roy.vo.ClassC">
+        <property name="user" ref="userA"/>
+    </bean>
+
     <!-- test ciculat reference -->
     <!--<bean id="ciculatA" class="com.roy.vo.circular.CiculatA">
         <constructor-arg ref="ciculatB"/>
