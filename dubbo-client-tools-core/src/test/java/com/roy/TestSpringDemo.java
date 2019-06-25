@@ -1,7 +1,10 @@
 package com.roy;
 
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+import com.alibaba.dubbo.config.spring.extension.SpringExtensionFactory;
 import com.otherPkg.DynamicBeanA;
 import com.otherPkg.DynamicBeanB;
+import com.roy.spi.Car;
 import com.roy.vo.ClassA;
 import com.roy.vo.ClassC;
 import com.roy.vo.circular.CiculatA;
@@ -53,6 +56,13 @@ public class TestSpringDemo  extends AbstractJUnit4SpringContextTests {
         beanFactory.registerBeanDefinition("dynamicBeanB", bd1);
         DynamicBeanB beanB = beanFactory.getBean("dynamicBeanB", DynamicBeanB.class);
         System.out.println(beanB);
+    }
+
+    @Test
+    public void testSpi() {
+        SpringExtensionFactory.addApplicationContext(applicationContext);
+        Car car = ExtensionLoader.getExtensionLoader(Car.class).getExtension("lamborghini");
+        System.out.println(car);
     }
 
 }
