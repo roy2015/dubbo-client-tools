@@ -28,7 +28,7 @@ public class ClassA {
     @Value("${birthDate}")
     private Date birthDate;
 
-//    @Resource(name = "userA")
+    @Resource(name = "userA")
     private User user;
 
     ClassB classB;
