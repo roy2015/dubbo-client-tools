@@ -20,9 +20,11 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <skipTest>true</skipTest>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
-        <skipTest>true</skipTest>
+
         <version-maven-jar-plugin>2.4</version-maven-jar-plugin>
         <version-maven-assembly-plugin>2.4</version-maven-assembly-plugin>
         <version.rogrand-security>2.0.7</version.rogrand-security>
@@ -31,30 +33,7 @@
         <!-- Spring版本由3.1.3.RELEASE升级到4.3.10.RELEASE -->
         <version-spring>4.3.10.RELEASE</version-spring>
         <!-- Dubbo版本由2.4.5升级到2.5.7-->
-        <version-dubbo>2.5.7</version-dubbo>
-        <!-- Apache Commons -->
-        <commons.langs.version>3.4</commons.langs.version>
-        <commons.io.version>1.3.2</commons.io.version>
-        <!-- fastjson -->
-        <fastjson.version>1.2.8</fastjson.version>
-        <!-- guava -->
-        <guava.version>15.0</guava.version>
-        <!-- Cache -->
-        <memcached.version>2.0.0</memcached.version>
-        <aspectj.version>1.8.0</aspectj.version>
-        <cglib.version>2.1_3</cglib.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
-        <skipTest>true</skipTest>
-
-        <version.rogrand-security>2.0.7</version.rogrand-security>
-        <!-- LogStash -->
-        <ops.logstash.version>1.1</ops.logstash.version>
-        <!-- Spring版本由3.1.3.RELEASE升级到4.3.10.RELEASE -->
-        <version-spring>4.3.10.RELEASE</version-spring>
-        <!-- Dubbo版本由2.4.5升级到2.5.7-->
-        <version-dubbo>2.5.7</version-dubbo>
+        <version-dubbo>2.6.4</version-dubbo>
         <version-netty4>4.0.28.Final</version-netty4>
         <!-- Apache Commons -->
         <commons.langs.version>3.4</commons.langs.version>
