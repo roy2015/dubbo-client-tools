@@ -21,7 +21,7 @@ import java.io.IOException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:dubbo-demo-service.xml" })
-public class TestDubboDemoService extends AbstractJUnit4SpringContextTests {
+public class TestDubboDemo extends AbstractJUnit4SpringContextTests {
 
     @Autowired
     private DemoService demoService;

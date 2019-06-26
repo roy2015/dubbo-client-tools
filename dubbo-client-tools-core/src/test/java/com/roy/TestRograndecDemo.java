@@ -7,7 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-/**
+/** 融贯的测试，废弃
  * @Author: jun.guo
  * @Email: jun.guo@rograndec.com
  * @CreateDate: 2018/12/12 0012
@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:dubbo-service.xml" })
-public class TestDubboService extends AbstractJUnit4SpringContextTests {
+public class TestRograndecDemo extends AbstractJUnit4SpringContextTests {
 
     @Test
     public void test1() {
