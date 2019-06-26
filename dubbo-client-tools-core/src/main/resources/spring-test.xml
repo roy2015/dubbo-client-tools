@@ -8,9 +8,31 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <context:component-scan base-package="com.roy"/>
+    <context:component-scan base-package="com.roy.object"/>
     <context:annotation-config />
 
+    <bean id="customEditorConfigurer"  class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="java.util.Date" value="com.roy.propertyeditor.MyCustomDateEditor"/>
+            </map>
+        </property>
+    </bean>
 
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.roy.propertyeditor.UserAToUserConverter">
+                    <property name="dateFormatStr" value="yyyy-MM-dd hh:mm:ss"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="userA" class="com.roy.vo.targetVO.UserA">
+        <property name="ageA" value="12"/>
+        <property name="birthDateA" value="1989-06-04 06:03:04"/>
+        <property name="nameA" value="jun,guo"/>
+    </bean>
 
 </beans>

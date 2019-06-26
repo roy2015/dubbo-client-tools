@@ -16,10 +16,10 @@ import java.util.Date;
  * @Version: 1.0
  */
 
-@Component
 /**
  * 测试主类
  */
+@Component
 public class ClassA {
 
     @Value("${redis.addr}")

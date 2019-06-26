@@ -34,6 +34,9 @@ public class TestSpringDemo  extends AbstractJUnit4SpringContextTests {
     @Autowired
     ClassC classC;
 
+    /**
+     * 测试注入property value
+     */
     @Test
     public void testSpringLoadProcess() {
         System.out.println( classA.getRedisUrl() );
@@ -42,6 +45,9 @@ public class TestSpringDemo  extends AbstractJUnit4SpringContextTests {
         logger.debug(classC.getUser());
     }
 
+    /**
+     * 测试动态beandefinition
+     */
     @Test
     public void testCreateBeanOnConextRefreshed() {
 
@@ -58,6 +64,9 @@ public class TestSpringDemo  extends AbstractJUnit4SpringContextTests {
         System.out.println(beanB);
     }
 
+    /**
+     * 测试dubbo spi
+     */
     @Test
     public void testSpi() {
         SpringExtensionFactory.addApplicationContext(applicationContext);

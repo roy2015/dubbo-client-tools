@@ -1,7 +1,5 @@
 package com.roy;
 
-import com.rogrand.common.util.MD5;
-import com.roy.dubbo.MainTestService;
 import com.roy.dubbo.exception.HelloWorldException;
 import com.roy.dubbo.provider.service.demo.DemoService;
 import org.junit.Test;
