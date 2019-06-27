@@ -9,11 +9,16 @@
 
     <dubbo:application name="roy-demo-consume" owner="roy" organization="rograndec" />
 
+    <!-- 没有zk时注释下面这个 -->
     <!--<dubbo:registry address="zookeeper://127.0.0.1:2181" />-->
 
     <!-- 关闭所有服务的启动时检查 (没有提供者时报错)。 测试下netty4-->
 	<dubbo:consumer check="false" client="netty4" />
 
+    <!--<dubbo:reference id="demoService" interface="com.roy.dubbo.provider.service.demo.DemoService"
+                     timeout="30000" version="2.0.0"/>-->
+
+    <!-- 没有zk时用下面这个并注释调上面的那个 -->
     <dubbo:reference id="demoService" interface="com.roy.dubbo.provider.service.demo.DemoService"
                      timeout="30000" version="2.0.0" url="localhost:20880"/>
     
