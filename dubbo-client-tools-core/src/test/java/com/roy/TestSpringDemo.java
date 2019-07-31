@@ -55,6 +55,8 @@ public class TestSpringDemo  extends AbstractJUnit4SpringContextTests {
 //        BeanDefinitionBuilder bdb = BeanDefinitionBuilder.genericBeanDefinition(DynamicBeanA.class);
         RootBeanDefinition bd = new RootBeanDefinition(DynamicBeanA.class);
         beanFactory.registerBeanDefinition("dynamicBeanA", bd);
+        bd.getPropertyValues().addPropertyValue("name", "guoj");
+        bd.getPropertyValues().addPropertyValue("age", "100");
         DynamicBeanA beanA = beanFactory.getBean("dynamicBeanA", DynamicBeanA.class);
         System.out.println(beanA);
 
